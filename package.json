@@ -1,0 +1,24 @@
+{
+  "name": "sisecotre",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx http-server frontend",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thony69/sisEcoTre.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thony69/sisEcoTre/issues"
+  },
+  "homepage": "https://github.com/Thony69/sisEcoTre#readme",
+  "description": "",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
