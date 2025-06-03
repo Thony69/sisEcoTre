@@ -2,48 +2,28 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Calculadora TRE</title>
-  <link rel="stylesheet" href="./style.css" />
-   
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Calculadora TRE</h1>
-    <form id="calcForm">
-      <div>
-        <label for="monto">MONTO</label>
-        <input type="number" id="monto" name="monto" min="0" step="any" required />
-      </div>
-      <div>
-        <label for="tasa">TASA (%)</label>
-        <input type="number" id="tasa" name="tasa" min="0" step="any" required />
-      </div>
-      <div>
-        <label for="tre">TRE (ANUAL) (%)</label>
-        <input type="number" id="tre" name="tre" min="0" step="any" required />
-      </div>
-      <div>
-        <label for="plazo">PLAZO (años)</label>
-        <input type="number" id="plazo" name="plazo" min="1" step="1" required />
-      </div>
-      <button type="submit">Calcular</button>
-    </form>
+  <h1>Calculadora de TRE - Crédito Hipotecario</h1>
+  <div>
+    <label>Monto del préstamo:</label>
+    <input type="number" id="monto" placeholder="Ej. 200000" />
+    <label>Plazo en meses:</label>
+    <input type="number" id="plazo" placeholder="Ej. 180" />
+    <label>Tasa fija anual (%):</label>
+    <input type="number" step="0.01" id="tasa" placeholder="Ej. 5" />
+    <label>TRE anual (%):</label>
+    <input type="number" step="0.01" id="tre" placeholder="Ej. 3.05" />
+    <label>Mes de inicio de TRE:</label>
+    <input type="number" id="mesTre" value="13" />
+    <button onclick="calcularTRE()">Calcular</button>
   </div>
 
-  <script>
-    document.getElementById('calcForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const monto = parseFloat(document.getElementById('monto').value);
-      const tasa = parseFloat(document.getElementById('tasa').value);
-      const tre = parseFloat(document.getElementById('tre').value);
-      const plazo = parseInt(document.getElementById('plazo').value, 10);
+  <div class="result-section" id="resultado"></div>
 
-      // Por ahora solo muestro los valores
-      alert(`Valores ingresados:\nMonto: ${monto}\nTasa: ${tasa}%\nTRE: ${tre}% anual\nPlazo: ${plazo} años`);
-
-      // Aquí puedes agregar la lógica para calcular y mostrar resultados
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
