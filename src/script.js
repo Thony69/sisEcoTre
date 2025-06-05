@@ -64,7 +64,7 @@ function calcularTRE() {
     `;
   }
 
-  function generarTablaPRICE() {
+  function generarTablaSACsinTRE() {
     let saldo = monto;
     const cuotaInicial = monto * tasaMensual / (1 - Math.pow(1 + tasaMensual, -plazo));
     let totalInteres = 0;
