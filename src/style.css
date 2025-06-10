@@ -37,7 +37,7 @@ body {
   font-size: 24px; /* Ajusta tamaño según lo necesario */
 }
 
-/* 💡 **Ahora agregamos la responsividad para móviles** */
+/* Responsive Design for Mobile Devices */
 @media screen and (max-width: 768px) {
   .header-container {
     flex-direction: column; /* Cambia a formato vertical en pantallas pequeñas */
@@ -55,7 +55,6 @@ body {
 }
 
 
-/* El resto de estilos se mantienen igual */
 h1, h2 {
   text-align: center;
 }
