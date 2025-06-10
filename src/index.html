@@ -7,20 +7,29 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Calculadora de TRE - Crédito Hipotecario</h1>
-  <div>
-    <label>Monto del préstamo:</label>
-    <input type="number" id="monto" placeholder="Ej. 200000" />
-    <label>Plazo en años:</label>
-    <input type="number" id="plazo" placeholder="Ej. 180" />
-    <label>Tasa fija anual (%):</label>
-    <input type="number" step="0.01" id="tasa" placeholder="Ej. 5" />
-    <label>TRE anual (%):</label>
-    <input type="number" step="0.01" id="tre" placeholder="Ej. 3.05" />
-    <label>Mes de inicio de TRE:</label>
-    <input type="number" id="mesTre" value="13" />
-    <button onclick="calcularTRE()">Calcular</button>
-  </div>
+  <header class="header-container">
+    <div class="logo-container logo-left">
+      <img src="image/universidad.png" alt="Universidad" />
+    </div>
+    <div class="title-container">
+      <h1 class="page-title">Calculadora de TRE - Crédito Hipotecario</h1>
+    </div>
+    <div class="logo-container logo-right">
+      <img src="image/facultadTitle.png" alt="Facultad" />
+    </div>
+  </header>
+
+  <label>Monto del préstamo:</label>
+  <input type="number" id="monto" placeholder="Ej. 200000" />
+  <label>Plazo en años:</label>
+  <input type="number" id="plazo" placeholder="Ej. 180" />
+  <label>Tasa fija anual (%):</label>
+  <input type="number" step="0.01" id="tasa" placeholder="Ej. 5" />
+  <label>TRE anual (%):</label>
+  <input type="number" step="0.01" id="tre" placeholder="Ej. 3.05" />
+  <label>Mes de inicio de TRE:</label>
+  <input type="number" id="mesTre" value="13" />
+  <button onclick="calcularTRE()">Calcular</button>
 
   <div class="result-section" id="resultado"></div>
 
