@@ -19,17 +19,20 @@
     </div>
   </header>
 
-  <label>Monto del préstamo:</label>
-  <input type="number" id="monto" placeholder="Ej. 200000" />
-  <label>Plazo en años:</label>
-  <input type="number" id="plazo" placeholder="Ej. 180" />
-  <label>Tasa fija anual (%):</label>
-  <input type="number" step="0.01" id="tasa" placeholder="Ej. 5" />
-  <label>TRE anual (%):</label>
-  <input type="number" step="0.01" id="tre" placeholder="Ej. 3.05" />
-  <label>Mes de inicio de TRE:</label>
-  <input type="number" id="mesTre" value="13" />
-  <button onclick="calcularTRE()">Calcular</button>
+  <main>
+    <div class="form-container">
+      <label for="monto">Monto del préstamo:</label>
+      <input type="number" id="monto" placeholder="Ej. 200000" />
+      <label for="plazo">Plazo en años:</label>
+      <input type="number" id="plazo" placeholder="Ej. 10" />
+      <label for="tasa">Tasa fija anual (%):</label>
+      <input type="number" step="0.01" id="tasa" placeholder="Ej. 5" />
+      <label for="tre">TRE anual (%):</label>
+      <input type="number" step="0.01" id="tre" placeholder="Ej. 3.05" />
+      <label for="mesTre">Mes de inicio de TRE:</label>
+      <input type="number" id="mesTre" value="13" min="10" />
+      <button onclick="calcularTRE()">Calcular</button>
+    </div>
 
   <div class="result-section" id="resultado"></div>
 
