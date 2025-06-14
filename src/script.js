@@ -77,7 +77,7 @@ function calcularTRE() {
 
         return `
             <div class="sac-section">
-                <h2>Método SAC</h2>
+                <h2>Método SAC con TRE</h2>
                 <table>
                     <tr><th>Mes</th><th>Saldo</th><th>Amortización</th><th>Interés</th><th>Cuota</th></tr>
                     ${rows}
@@ -134,3 +134,10 @@ function calcularTRE() {
         `;
     }
 }
+document.querySelectorAll('input[type="number"]').forEach(input => {
+  input.addEventListener('keydown', function(e) {
+    if (e.key === '-' || e.key === 'e' || e.key === '+' || e.key === ',') {
+      e.preventDefault();
+    }
+  });
+});
