@@ -10,7 +10,7 @@ function calcularTRE() {
     const tasaAnual = parseFloat(tasaInput.value) / 100;
     const treAnual = parseFloat(treInput.value) / 100;
     const mesTre = parseInt(mesTreInput.value);
-
+    
     const result = document.getElementById('resultado');
 
     if (isNaN(monto) || montoInput.value.trim() === '' ||
@@ -50,7 +50,8 @@ function calcularTRE() {
         const amortizacion = monto / tiempo;
         let totalInteres = 0;
         let totalPagado = 0;
-        let tasaMensualconTRE = (tasaAnual - 0.02) + treMensual; 
+        const tasaAjustadaAnual = (tasaAnual - 0.02) + treAnual; 
+        const tasaMensualconTRE = tasaAjustadaAnual / 12; 
         console.log(tasaMensualconTRE);
         let rows = `
             <tr>
