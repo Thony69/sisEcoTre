@@ -155,10 +155,12 @@ button:hover {
 
 /* ESTILO CRUCIAL PARA LA RESPONSIVIDAD DE LA TABLA */
 .table-responsive {
-    overflow-x: auto; /* ¡Esto hace que la tabla sea responsiva en su contenedor! */
-    -webkit-overflow-scrolling: touch; /* Mejora el desplazamiento en iOS */
-    margin-top: 10px; /* Un pequeño margen superior si lo deseas dentro de result-section */
-    margin-bottom: 10px; /* Margen inferior */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 /* Estilos de la tabla misma */
@@ -185,6 +187,7 @@ th, td {
 th {
   background-color: #0056b3;
   color: white;
+  text-align: center;
 }
 
 .sac-section,
@@ -208,17 +211,19 @@ th {
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
   .header-container {
-    flex-direction: column;
-    gap: 5px;
+    flex-direction: row;  /* <-- aquí el cambio clave */
+    justify-content: space-between;
+    align-items: center;
     padding: 8px 10px;
+    gap: 10px;
   }
 
   .logo-container img {
-    width: 70px;
+     width: 50px;
   }
 
   .page-title {
-    font-size: 26px;
+    font-size: 20px; 
     margin-top: 5px;
   }
 
@@ -236,9 +241,12 @@ th {
   main {
       padding: 10px;
   }
-
+   .table-responsive table {
+    min-width: unset;
+  }
   th, td {
-    padding: 6px; /* Menos padding en celdas para ahorrar espacio en móvil */
-    font-size: 0.9em; /* Fuente ligeramente más pequeña en celdas */
+    padding: 4px; /* Menos padding en celdas para ahorrar espacio en móvil */
+    font-size: 0.8em; /* Fuente ligeramente más pequeña en celdas */
   }
 }
+

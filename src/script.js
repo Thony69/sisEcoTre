@@ -79,10 +79,12 @@ function calcularTRE() {
         return `
             <div class="sac-section">
                 <h2>Método SAC con TRE</h2>
+                <div class="table-responsive">
                 <table>
                     <tr><th>Mes</th><th>Saldo</th><th>Amortización</th><th>Interés</th><th>Cuota</th></tr>
                     ${rows}
                 </table>
+                </div>
                 <div class="summary">
                     <p>Total intereses: $${totalInteres.toFixed(2)}</p>
                     <p>Total pagado: $${totalPagado.toFixed(2)}</p>
